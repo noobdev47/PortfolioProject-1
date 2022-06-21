@@ -1,5 +1,5 @@
-const todoRouter = require('./todo')
+const expenseRouter = require('./expense')
 
 module.exports = {
-  todoRouter
+  expenseRouter
 }
