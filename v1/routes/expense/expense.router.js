@@ -1,10 +1,10 @@
 const express = require('express')
 const mongoose = require('mongoose')
-const Expense = require('../../models/Expense')
-const CustomError = require('../../utils/CustomError')
-const catchAsyncError = require('../../utils/catchAsyncError')
+const Expense = require('../../../models/Expense')
+const CustomError = require('../../../utils/CustomError')
+const catchAsyncError = require('../../../utils/catchAsyncError')
 // const { getValidator } = require('../validators/get')
-const { errorFormatter } = require('../../utils/errorFormatter')
+const { errorFormatter } = require('../../../utils/errorFormatter')
 
 const router = express.Router()
 
@@ -28,7 +28,7 @@ router.post(
 
 		await tempExpense.save()
 
-		res.status(200).send({ message: 'Expense Added!!!' })
+		res.status(200).send({ message: 'Expense Added...' })
 	})
 )
 

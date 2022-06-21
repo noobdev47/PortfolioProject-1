@@ -16,8 +16,12 @@ const expenseSchema = new mongoose.Schema({
 	paid: {
 		type: Boolean,
 	},
+	user: {
+		type: mongoose.Schema.Types.ObjectId,
+		ref: 'User',
+	},
 })
 
-const Todo = mongoose.model('Expense', expenseSchema)
+const Expense = mongoose.model('Expense', expenseSchema)
 
-module.exports = Todo
+module.exports = Expense

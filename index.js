@@ -21,4 +21,5 @@ app.listen(process.env.PORT, () => {
 	console.log(`Server Listening on port ${process.env.PORT}...`)
 })
 
+app.use('/v1/users', v1Routes.userRouter)
 app.use('/v1/expenses', v1Routes.expenseRouter)
